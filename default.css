@@ -1,0 +1,344 @@
+:root {
+    --mainColor:#eaeaea;
+    --secondaryColor:#fff;
+
+    --borderColor:#c1c1c1;
+
+
+    --mainText:black;
+    --secondaryText:#4b5156;
+
+    --themeDotBroder:#24292e;
+
+    --previewBg: rgb(251, 249, 243, 0.8);
+    --previewShadow: #f0ead6;
+}
+
+/*main padding and margin*/
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+/*colors and fonts for each header textarea*/
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+/*colors and fonts for each secondary textarea*/
+p, li, span, label, input, textarea {
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*link's color*/
+a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+
+/*color for section 1 background*/
+.s1{
+    background-color: var(--mainColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+
+/*color for section 2 background*/
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+
+/*sizeable text container*/
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*colors, text alignments and borders for greeting wrapper class*/
+.greeting-wrapper{
+    display: grid;
+
+    text-align: center;
+    align-content: center;
+
+    border:2px dashed lightcoral;
+    min-height: 10em;
+}
+
+/*colors, text alignments, shadow design, grid for text,
+ and borders for intro*/
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border:1px solid var(--borderColor);
+
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: 35px 15px 20px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 35px 15px 20px 5px rgba(0,0,0,0.75);
+    box-shadow: 35px 15px 20px 5px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+}
+
+/*nav-wrapper design*/
+.nav-wrapper{
+    border-radius: 5px 5px 0 0;
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+
+    display: flex;
+
+    /*design the dots space*/
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+}
+
+/*navigation bar position*/
+#navigation{
+    margin:0;
+    padding: 10px;
+}
+
+/*navigation text design*/
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*dots postion*/
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+/*dot-1 color*/
+#dot-1{
+    background-color: red;
+}
+
+/*dot-2 color*/
+#dot-2{
+    background-color: yellow;
+}
+
+/*dot-3 color*/
+#dot-3{
+    background-color: green;
+}
+
+/*shape, border, and shadow of the dots*/
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+
+    -webkit-box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+}
+
+/*left-column design*/
+.left-column{
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*profile picture display*/
+#profile_pic{
+    display: block;
+    margin:0 auto;
+
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+/*theme-options button position*/
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/*theme-options button design*/
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBroder);
+
+    -webkit-box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 10px -5px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+/*theme-options button hover effect*/
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+/*theme-options button light mode*/
+#light-mode{
+    background-color: #fff;
+}
+
+/*theme-options button blue mode*/
+#blue-mode{
+    background-color: #192734;
+}
+
+/*theme-options button green mode*/
+#green-mode{
+    background-color: #78866b;
+}
+
+/*theme-options button purple mode*/
+#purple-mode{
+    background-color: #7E4C74;
+}
+
+/*note under theme-options button*/
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/*right-column design*/
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 100px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+/*preview text design*/
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative
+}
+
+/*preview text corner circles design*/
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+
+/*preview text top left corner circle design*/
+#corner-tl{
+    top:-5px;
+    left: -5px;
+}
+
+/*preview text top right corner circle design*/
+#corner-tr{
+    top:-5px;
+    right: -5px;
+}
+
+/*preview text bottom right corner circle design*/
+#corner-br{
+    bottom:-5px;
+    right: -5px;
+}
+
+/*preview text bottom left corner circle design*/
+#corner-bl{
+    bottom:-5px;
+    left: -5px;
+}
+
+.about-wrapper{
+    display: grid;
+
+    /*repeat minmax(), which means auto-fit as many columns as possible into this row, the column should never 
+    be smaller than 320px. If reach the point of crashing, stacking the content naturally*/
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));   
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#social_img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+}
